@@ -1,8 +1,10 @@
+import os
+
 import pandas as pd
 import requests
 
 # URL of the Excel file
-excel_url = 'http://www.moe.gov.cn/jyb_xxgk/s5743/s5744/A03/202110/W020211027623974108131.xls'
+excel_url = os.getenv('EXCEL_URL', 'default_excel_url_if_not_set')
 headers = {
     'Referer': 'http://www.moe.gov.cn/',
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36'
