@@ -25,16 +25,16 @@ jobs:
       with:
         name: universities-json
         path: universities.json
-
-    - name: Commit files
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add .
-        git commit -m "Add new file" -a
-
-    - name: Push changes
-      uses: ad-m/github-push-action@v0.6.0
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        force: true
+#
+#    - name: Commit files
+#      run: |
+#        git config --local user.email "action@github.com"
+#        git config --local user.name "GitHub Action"
+#        git add .
+#        git commit -m "Add new file" -a
+#
+#    - name: Push changes
+#      uses: ad-m/github-push-action@v0.6.0
+#      with:
+#        github_token: ${{ secrets.GITHUB_TOKEN }}
+#        force: true
